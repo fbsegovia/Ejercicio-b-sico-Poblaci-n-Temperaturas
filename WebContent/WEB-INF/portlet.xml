@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<portlet-app xmlns='http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd'
+	version='1.0'>
+	
+	<!-- 
+		El servlet encarcago de gestionar los portles (en este ejemplo
+		org.apache.pluto.container.driver.PortletServlet, que hemos dado de alta en el web.xml)
+		Se encargará de buscar este archivo (portlet.xml), para dar de alta los portlets que tengamos
+	 -->
+	
+	<portlet>
+		<!-- Nombre del portlet para utilizar en el web.xml-->
+		<portlet-name>Poblacion_Portlet</portlet-name>
+		<!-- Nombre que se vera en el panel de administracion, ojo, pluto no le hace caso -->
+		<display-name>Poblacion_Portlet</display-name>
+		<!-- nombre de la clase -->
+		<portlet-class>portlets.PoblacionPortlet</portlet-class>
+		<!-- modos soportados por el portlet, podemos decir los que queremos mostrar -->
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+			<portlet-mode>EDIT</portlet-mode>
+			<portlet-mode>HELP</portlet-mode>
+		</supports>
+		<!-- El nombre que se mostrará en la cabecera del portlet -->
+		<portlet-info>
+			<title>Este es el portlet de poblacion</title>
+		</portlet-info>
+	</portlet>
+	
+	<portlet>
+		<!-- Nombre del portlet para utilizar en el web.xml-->
+		<portlet-name>Temperaturas_Portlet</portlet-name>
+		<!-- Nombre que se vera en el panel de administracion, ojo, pluto no le hace caso -->
+		<display-name>Temperaturas_Portlet</display-name>
+		<!-- nombre de la clase -->
+		<portlet-class>portlets.TemperaturasPortlet</portlet-class>
+		<!-- modos soportados por el portlet, podemos decir los que queremos mostrar -->
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+			<portlet-mode>EDIT</portlet-mode>
+			<portlet-mode>HELP</portlet-mode>
+		</supports>
+		<!-- El nombre que se mostrará en la cabecera del portlet -->
+		<portlet-info>
+			<title>Este es el portlet de temperaturas</title>
+		</portlet-info>
+	</portlet>
+
+</portlet-app>
